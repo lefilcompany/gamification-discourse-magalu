@@ -15,9 +15,10 @@ def add_score(user_id, date, descricao="Mencionado em comentário"):
     payload = {
         "user_id": user_id,
         "date": date,
-        "points": 1,
+        "points": 2,
         "score_type_id": 1,
-        "description": descricao
+        "description": descricao,
+        "reason": "Mencionado em comentário"
     }
     url = f"{DISCOURSE_URL}/admin/plugins/gamification/score_events.json"
     headers = {
