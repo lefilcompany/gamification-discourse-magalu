@@ -16,6 +16,7 @@ def add_score(user_id, date, descricao="Mencionado em comentário"):
         "user_id": user_id,
         "date": date,
         "points": 1,
+        "score_type_id": 1,
         "description": descricao
     }
     url = f"{DISCOURSE_URL}/admin/plugins/gamification/score_events.json"
